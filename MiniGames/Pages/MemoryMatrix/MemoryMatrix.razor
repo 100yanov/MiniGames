@@ -1,0 +1,14 @@
+﻿@page "/MemoryMatrix"
+
+<h3>Memory Matrix</h3>
+
+<button class="btn btn-primary mt-3" @onclick="StartGame">Restart Game</button>
+
+<div class="game-grid" style="--grid-size:@(gridSize)">
+    @for (int i = 0; i < gridSize * gridSize; i++)
+    {
+        int index = i;
+        <div class="game-cell" style="background-color:@(cells[index].Color)" @onclick="() => CellClicked(index)"></div>
+    }
+</div>
+
