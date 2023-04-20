@@ -8,7 +8,7 @@
     @for (int i = 0; i < gridSize * gridSize; i++)
     {
         int index = i;
-        <div class="game-cell" style="background-color:@(cells[index].Color)" @onclick="() => CellClicked(index)"></div>
+        <CellComponent Color="@cells[i].Color" OnClick="()=>CellClicked(index)"></CellComponent>
     }
 </div>
 

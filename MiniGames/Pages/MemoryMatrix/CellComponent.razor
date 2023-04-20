@@ -1,0 +1,8 @@
+﻿<div class="game-cell" style="background-color:@Color" @onclick="OnClick"></div>
+
+@code {
+    [Parameter] public string? Color { get; set; }
+
+    [Parameter] public EventCallback OnClick { get; set; }
+    
+}
